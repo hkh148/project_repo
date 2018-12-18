@@ -6,38 +6,42 @@ This project aims to identify and link text fragments of a given hebrew text doc
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+<<<<<<< HEAD
 First, you have to download or clone this repository to your local machine.
 
 The following programs/packages should be downloaded before running the scripts:
 
 1. Python 3
+=======
+### 1. Python 3
+>>>>>>> 89823d58cde35dae1acbb943e617b6ec3ee55bfa
 
-*Windows:* 
+#### *Windows:* 
 
 download python3 latest version from [python official website](https://www.python.org)
 
-*Linux:* 
+#### *Linux:* 
 
 install python3 with these commands: 
 
 	 sudo apt-get update
 	 sudo apt-get install python3.6
 
-2. Python packages
+### 2. Python packages
 
 install the following python packages using pip installer:
 
 * mysql
 * nltk
 
-3. mysql
+### 3. mysql
 
-*Windows:*
+#### *Windows:*
 
 * Download mysql version 5.7.24 from [here](https://dev.mysql.com/downloads/windows/installer/5.7.html)
 * For getting started explanation watch this [tutorial](https://www.youtube.com/watch?v=JFF0iU0zMbI&list=WL&index=8&t=0s)
 
-*Linux:* 
+#### *Linux:* 
 
 Follow the following steps to install mysql server on your linux machine:
 	1.
@@ -54,17 +58,17 @@ connect to the server with this command:
 
 and enter your password
 
-4. Wikipedia Dump
+### 4. Wikipedia Dump
 
 download and decompress from the wikipedia dump version February 01, 2018 the following files:
 
 * hewiki-20180201-pages-articles.xml.bz2
 
-*Windows:* 
+#### *Windows:* 
 
 download from the [here](https://archive.org/download/hewiki-20180201/hewiki-20180201-pages-articles.xml.bz2)
 
-*Linux:* 
+#### *Linux:* 
 
 download the file using the following command:
 
@@ -122,6 +126,10 @@ and then a wild output file would appear in your directory with some data in it.
 
 to create a .csv that contains for each text fragment in the input text file entities that are candidates for linking, run:
 
+<<<<<<< HEAD
 	python3 Spotter.py {your_input_file} {your_output_file}.csv
 
 for the input file provide your desired text to link and for your output file choose a name (if it doesn't exist it will create it for you) with file name extension .csv
+=======
+	python3 Spotter.py input_text_name {your_output_file}.csv
+>>>>>>> 89823d58cde35dae1acbb943e617b6ec3ee55bfa
