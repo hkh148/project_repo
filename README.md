@@ -11,34 +11,34 @@ First, you have to download or clone this repository to your local machine.
 The following programs/packages should be downloaded before running the scripts:
 
 
-1. Python 3
+### 1. Python 3
 
-*Windows:* 
+#### *Windows:* 
 
 download python3 latest version from [python official website](https://www.python.org)
 
-*Linux:* 
+#### *Linux:* 
 
 install python3 with these commands: 
 
 	 sudo apt-get update
 	 sudo apt-get install python3.6
 
-2. Python packages
+### 2. Python packages
 
 install the following python packages using pip installer:
 
 	* mysql
 	* nltk
 
-3. mysql
+### 3. mysql
 
-*Windows:*
+#### *Windows:*
 
 * Download mysql version 5.7.24 from [here](https://dev.mysql.com/downloads/windows/installer/5.7.html)
 * For getting started explanation watch this [tutorial](https://www.youtube.com/watch?v=JFF0iU0zMbI&list=WL&index=8&t=0s)
 
-*Linux:* 
+#### *Linux:* 
 
 Follow the following steps to install mysql server on your linux machine:
 	
@@ -55,17 +55,17 @@ connect to the server with this command:
 
 and enter your password
 
-4. Wikipedia Dump
+### 4. Wikipedia Dump
 
 download and decompress from the wikipedia dump version February 01, 2018 the following files:
 
 * hewiki-20180201-pages-articles.xml.bz2
 
-*Windows:* 
+#### *Windows:* 
 
 download from the [here](https://archive.org/download/hewiki-20180201/hewiki-20180201-pages-articles.xml.bz2)
 
-*Linux:* 
+#### *Linux:* 
 
 download the file using the following command:
 
