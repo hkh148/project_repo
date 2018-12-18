@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 *Windows:* 
 
-download IDE for python from: [Download Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows)
+download python3 latest version from [python official website] https://www.python.org
 
 *Linux:* 
 
