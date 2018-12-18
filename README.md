@@ -6,7 +6,7 @@ This project aims to identify and link text fragments of a given hebrew text doc
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-1. Python 3
+### 1. Python 3
 
 *Windows:* 
 
@@ -19,7 +19,7 @@ install python3 with these commands:
 	 sudo apt-get update
 	 sudo apt-get install python3.6
 
-2. Python packages
+### 2. Python packages
 
 install the following python packages:
 
@@ -30,7 +30,7 @@ install the following python packages:
 * re
 * csv
 
-3. mysql
+### 3. mysql
 
 *Windows:*
 
@@ -47,7 +47,7 @@ connect to the server with this command:
 
 and enter your password
 
-4. Wikipedia Dump
+### 4. Wikipedia Dump
 
 download and decompress from the wikipedia dump version February 01, 2018 the following files:
 
