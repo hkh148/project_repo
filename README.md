@@ -42,9 +42,7 @@ install the following python packages using pip installer:
 
 Follow the following steps to install mysql server on your linux machine:
 	
-1.
 	sudo apt-get update
-2.
 	sudo apt-get install mysql-server
 		
 When asked, choose 203761333 as your root user password. (if you choose otherwise, certain files should be updated - explained later)
