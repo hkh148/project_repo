@@ -8,11 +8,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### 1. Python 3
 
-*Windows:* 
+#### *Windows:* 
 
 download python3 latest version from [python official website](https://www.python.org)
 
-*Linux:* 
+#### *Linux:* 
 
 install python3 with these commands: 
 
@@ -32,12 +32,12 @@ install the following python packages:
 
 ### 3. mysql
 
-*Windows:*
+#### *Windows:*
 
 * Download mysql version 5.7.24 from [here](https://dev.mysql.com/downloads/windows/installer/5.7.html)
 * For getting started explanation watch this [tutorial](https://www.youtube.com/watch?v=JFF0iU0zMbI&list=WL&index=8&t=0s)
 
-*Linux:* 
+#### *Linux:* 
 
 For installing mysql server on linux watch this [tutorial](https://www.youtube.com/watch?v=0o0tSaVQfV4)
 
@@ -53,11 +53,11 @@ download and decompress from the wikipedia dump version February 01, 2018 the fo
 
 * hewiki-20180201-pages-articles.xml.bz2
 
-*Windows:* 
+#### *Windows:* 
 
 download from the [here](https://archive.org/download/hewiki-20180201)
 
-*Linux:* 
+#### *Linux:* 
 
 download the file using the following command:
 
