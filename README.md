@@ -47,7 +47,7 @@ Follow the following steps to install mysql server on your linux machine:
 	2.
 		sudo apt-get install mysql-server
 		
-	3. When asked, choose 203761333 as your root user password. (if you choose otherwise, certain files should be updated - explained later)
+When asked, choose 203761333 as your root user password. (if you choose otherwise, certain files should be updated - explained later)
 
 connect to the server with this command:
 
@@ -127,4 +127,3 @@ to create a .csv that contains for each text fragment in the input text file ent
 
 for the input file provide your desired text to link and for your output file choose a name (if it doesn't exist it will create it for you) with file name extension .csv
 
-	python3 Spotter.py input_text_name {your_output_file}.csv
