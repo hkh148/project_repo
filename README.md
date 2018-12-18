@@ -61,11 +61,11 @@ download and decompress from the wikipedia dump version February 01, 2018 the fo
 
 #### *Windows:* 
 
-download from the [here](https://archive.org/download/hewiki-20180201/hewiki-20180201-pages-articles.xml.bz2)
+download from link [here](https://archive.org/download/hewiki-20180201/hewiki-20180201-pages-articles.xml.bz2) to the same directory you downloaded the repo
 
 #### *Linux:* 
 
-download the file using the following command:
+download the file using the following command from within the directory containing the repo:
 
 	wget https://archive.org/download/hewiki-20180201/hewiki-20180201-pages-articles.xml.bz2
 
