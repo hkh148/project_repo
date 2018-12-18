@@ -28,8 +28,8 @@ install python3 with these commands:
 
 install the following python packages using pip installer:
 
-* mysql
-* nltk
+	* mysql
+	* nltk
 
 3. mysql
 
@@ -41,9 +41,9 @@ install the following python packages using pip installer:
 *Linux:* 
 
 Follow the following steps to install mysql server on your linux machine:
+	
 	1.
 		sudo apt-get update
-	
 	2.
 		sudo apt-get install mysql-server
 		
