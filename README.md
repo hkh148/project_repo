@@ -31,6 +31,12 @@ install the following python packages using pip installer:
 	* mysql
 	* nltk
 
+#### *Linux:* 
+
+install a package using the following command:
+
+	python -m pip install SomePackage
+
 ### 3. mysql
 
 #### *Windows:*
@@ -86,7 +92,7 @@ if you chose a password of your own, the following files should be updated where
 5. acceptance_test.py
 (so all of them!)
 	
-run the following command to create a database in the root mysql user:
+run the following command to create an empty database in the root mysql user:
 
 	python3 dbcreator.py	
 
