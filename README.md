@@ -6,7 +6,7 @@ This project aims to identify and link text fragments of a given hebrew text doc
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-First, you have to download or clone this repository to your local machine.
+First, you have to download or clone this repository to your local machine, check [this link](https://help.github.com/articles/cloning-a-repository/#platform-linux) for explanation.
 
 The following programs/packages should be downloaded before running the scripts:
 
