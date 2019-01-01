@@ -1,0 +1,3 @@
+USER = 'TypeYourUserHere'
+PASSWORD = 'TypeYourPasswordHere'
+

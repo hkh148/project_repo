@@ -8,11 +8,11 @@ mydb = mysql.connector.connect(host='localhost', user='root', passwd='203761333'
 mycursor = mydb.cursor()
 exclude = set(string.punctuation)
 
-my_file = open(sys.argv[1],'r',encoding='utf8')
+input_file = open(sys.argv[1],'r',encoding='utf8')
 result = open(sys.argv[2],'w',encoding='utf8')
 csv_writer = csv.writer(result,dialect='excel',lineterminator='\n')
 csv_writer.writerow(['Mention','Start index','End index','Title','Wikipedia link'])
-data = my_file.read()
+data = input_file.read()
 for i in range(1,5):
 	grams = ngrams(data.split(), i)
 	start_index = 0
@@ -29,5 +29,5 @@ for i in range(1,5):
 			tmp_row = [word,start_index,start_index+i-1,entry[1],entry[0]]
 			csv_writer.writerow(tmp_row)
 		start_index+=1
-my_file.close()
+input_file.close()
 result.close()
