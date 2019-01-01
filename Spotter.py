@@ -41,6 +41,7 @@ for i in range(1,4):
 			splitted_list = word.split("'")
 			word = ''.join(w + "''" for w in splitted_list)
 			word = word[:-1]
+		print(word)
 		query = "SELECT * FROM AnchorTable" \
 			" WHERE Alias = '" + word + "';"
 		mycursor.execute(query)
