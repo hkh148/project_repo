@@ -27,7 +27,7 @@ def dbdropper():
 	cursor.execute("DROP DATABASE projectdb")
 	
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(description="Utility tool to create, clear or drop database")
 	parser.add_argument("operation", help="operation",choices=["create","clear","drop"])
 	args = parser.parse_args()
 	operation = args.operation
