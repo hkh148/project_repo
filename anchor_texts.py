@@ -44,7 +44,7 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             link = 'https://he.wikipedia.org/wiki/' + str(page_name)
 
             anchors += [page_name, anchor_text, str(taken_from)]
-            print('link: ' + link + ' ,' + ' page name: ' + page_name + ',' + ' anchor text: ' + anchor_text + ',' + ' taken from: ' + taken_from)
+            # print('link: ' + link + ' ,' + ' page name: ' + page_name + ',' + ' anchor text: ' + anchor_text + ',' + ' taken from: ' + taken_from)
             # mycursor.fetchall()
             query_insert = 'INSERT INTO AnchorTable (Link, Title, Alias, Taken_From) VALUES (%s, %s, %s, %s)'
             val_insert = (link, page_name, anchor_text, taken_from)
