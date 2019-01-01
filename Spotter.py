@@ -24,7 +24,8 @@ data = input_file.read()
 for i in range(1,4):
 	grams = ngrams(data.split(), i)
 	start_index = 0
-	for gram in grams:
+	grams_without_dup = list(set(grams))
+	for gram in grams_without_dup:
 		if i > 1:
 			for j in range(2,i+1):
 				if gram[j-1] in abbrev_dict.keys() or gram[j-1] in abbrev_dict.items():
