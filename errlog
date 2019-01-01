@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "Spotter.py", line 46, in <module>
+    mycursor.execute(query)
+  File "/home/hasan/.local/lib/python3.5/site-packages/mysql/connector/cursor.py", line 559, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/home/hasan/.local/lib/python3.5/site-packages/mysql/connector/connection.py", line 494, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/home/hasan/.local/lib/python3.5/site-packages/mysql/connector/connection.py", line 396, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''מתני''''' at line 1
