@@ -32,8 +32,10 @@ for i in range(1,4):
 		gram[0] = open_abbreviation(gram[0])
 		word = ''.join([w + ' ' for w in gram]).strip()
 		word = ''.join(ch for ch in word if ch not in exclude)
-		if word.find('–') != -1:
-			continue
+		if "''" in word:
+			splitted_list = word.split("''")
+			word = ''.join(w + '"' for w in splitted_list)
+			word = word[:-1]
 		query = "SELECT * FROM AnchorTable" \
 			" WHERE Alias = '" + word + "';"
 		mycursor.execute(query)
