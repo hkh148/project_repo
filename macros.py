@@ -1,3 +1,3 @@
-USER = 'TypeYourUserHere'
+USER_NAME = 'TypeYourUserHere'
 PASSWORD = 'TypeYourPasswordHere'
 

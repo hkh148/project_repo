@@ -3,8 +3,9 @@ import mysql.connector
 import string
 import sys
 import csv
+import macros
 
-mydb = mysql.connector.connect(host='localhost', user='root', passwd='203761333',database='projectdb')
+mydb = mysql.connector.connect(host='localhost', user=USER_NAME, passwd=PASSWORD,database='projectdb')
 mycursor = mydb.cursor()
 exclude = set(string.punctuation)
 

@@ -1,8 +1,9 @@
 import xml.etree.ElementTree as ET
 import re
 import mysql.connector
+import macros
 
-mydb = mysql.connector.connect(host='localhost', user='root', passwd='203761333',database='projectdb')
+mydb = mysql.connector.connect(host='localhost', user=USER_NAME, passwd=PASSWORD,database='projectdb')
 mycursor = mydb.cursor()
 mycursor.execute("CREATE TABLE IF NOT EXISTS AnchorTable (Id INT AUTO_INCREMENT PRIMARY KEY, Link VARCHAR(2083) NOT NULL, Title VARCHAR(255) NOT NULL, Alias VARCHAR(255) NOT NULL, Taken_From VARCHAR(255) NOT NULL )")
 
