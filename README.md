@@ -53,11 +53,11 @@ Follow the following steps to install mysql server on your linux machine:
 		
 When asked, choose 203761333 as your root user password. (if you choose otherwise, certain files should be updated - explained later)
 
-connect to the server with this command:
+to connect to the server you can use this command:
 
 	mysql -u root -p
 
-and enter your password
+and enter your password, and then go wild with it but make sure to exit the database by typing 'quit' (without quotation marks)
 
 ### 4. Wikipedia Dump
 
@@ -85,19 +85,13 @@ decompress the file using the following command (add -k flag to keep the origina
 
 if you chose a password of your own	you should update the file 'macros.py' to have your own user name (typically it should stay root unless you change it) and your own password in the corresponding variables
 
-run the following command to create an empty database in the root mysql user:
+dbutils.py is provided as a tool to create, clear and delete a database, before the next steps you should create the database using said file by typing:
+    
+    python3 dbutils create
 
-	python3 dbcreator.py	
+after running the command you should see 'projectdb' in the output.
 
-after running this script you should be able to connect to mysql server (see instruction above) and run the following command:
-	
-	SHOW DATABASES;
-
-and see 'projectdb' in the database list shown.
-
-make sure you quit mysql server by typing 'quit' (without quotation marks)
-
-to create a table with all anchor texts from all of wikipedia articles, run:
+to fill a table with all anchor texts from all of wikipedia articles, run:
 
 	python3 anchor_texts.py
 	
@@ -110,11 +104,11 @@ to make sure that the table exists in the database you can connect again to mysq
 
 and see 'AnchorTable'.
 
-you can also run the following command:
-	
-	python3 acceptance-test.py > output
-	
-and then a wild output file would appear in your directory with some data in it.
+or alternatively, you can type the following command (while still logged to mysql server) and see an actual content:
+    
+    SELECT * FROM AnchorTable LIMIT 10;
+
+this shows the first 10 rows that exist in the table.
 
 ### Spotting 
 
