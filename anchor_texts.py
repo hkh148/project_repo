@@ -49,8 +49,8 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             query_insert = 'INSERT INTO AnchorTable (Link, Title, Alias, Taken_From) VALUES (%s, %s, %s, %s)'
             val_insert = (link, page_name, anchor_text, taken_from)
             mycursor.execute(query_insert, val_insert)
-            mydb.commit()
         anchors_lst = []
         lines = []
+mydb.commit()
 mydb.disconnect()
 
