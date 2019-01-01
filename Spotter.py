@@ -29,8 +29,9 @@ for i in range(1,4):
 			for j in range(2,i+1):
 				if gram[j-1] in abbrev_dict.keys() or gram[j-1] in abbrev_dict.items():
 					continue;
-		gram[0] = open_abbreviation(gram[0])
-		word = ''.join([w + ' ' for w in gram]).strip()
+		list_of_gram = list(gram)
+		list_of_gram[0] = open_abbreviation(list_of_gram[0])
+		word = ''.join([w + ' ' for w in list_of_gram]).strip()
 		word = ''.join(ch for ch in word if ch not in exclude)
 		if "''" in word:
 			splitted_list = word.split("''")
