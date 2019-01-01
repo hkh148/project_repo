@@ -83,15 +83,8 @@ decompress the file using the following command (add -k flag to keep the origina
 
 ### Preparing the database
 
-if you chose a password of your own, the following files should be updated where it says passwd='203761333' to have passwd='your own password':
+if you chose a password of your own	you should update the file 'macros.py' to have your own user name (typically it should stay root unless you change it) and your own password in the corresponding variables
 
-1. dbcreator.py
-2. dbdropper.py
-3. anchor_texts.py
-4. spotter.py
-5. acceptance_test.py
-(so all of them!)
-	
 run the following command to create an empty database in the root mysql user:
 
 	python3 dbcreator.py	

@@ -1,3 +1,3 @@
-USER_NAME = 'TypeYourUserHere'
-PASSWORD = 'TypeYourPasswordHere'
+USER_NAME = 'root'
+PASSWORD = '203761333'
 
