@@ -93,7 +93,7 @@ after running the command you should see 'projectdb' in the output.
 
 to fill a table with all anchor texts from all of wikipedia articles, run:
 
-	python3 anchor_texts.py
+	python3 anchor_texts.py &
 	
 this should take a while, you can go take around 2.5 hour break.
 
@@ -114,7 +114,7 @@ this shows the first 10 rows that exist in the table.
 
 to create a .csv that contains for each text fragment in the input text file entities that are candidates for linking, run:
 
-	python3 Spotter.py {your_input_file} {your_output_file}.csv
+	python3 Spotter.py {your_input_file} {your_output_file}.csv &
 
 for the input file provide your desired text to link and for your output file choose a name (if it doesn't exist it will create it for you) with file name extension .csv
 
