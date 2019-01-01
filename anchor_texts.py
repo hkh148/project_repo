@@ -51,5 +51,5 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             mydb.commit()
         anchors_lst = []
         lines = []
-
+mydb.disconnect()
 

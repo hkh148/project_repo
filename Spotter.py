@@ -31,3 +31,4 @@ for i in range(1,5):
 		start_index+=1
 input_file.close()
 result.close()
+mydb.disconnect()
