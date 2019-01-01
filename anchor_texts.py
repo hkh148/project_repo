@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import re
 import mysql.connector
-import macros
+from macros import *
 
 mydb = mysql.connector.connect(host='localhost', user=USER_NAME, passwd=PASSWORD,database='projectdb')
 mycursor = mydb.cursor()

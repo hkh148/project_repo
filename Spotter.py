@@ -3,7 +3,7 @@ import mysql.connector
 import string
 import sys
 import csv
-import macros
+from macros import *
 
 mydb = mysql.connector.connect(host='localhost', user=USER_NAME, passwd=PASSWORD,database='projectdb')
 mycursor = mydb.cursor()
