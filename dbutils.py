@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 
 def dbcreator():
 	cursor = mydb.cursor()
-	cursor.execute("CREATE SCHEMA projectdb DEFAULT CHARACTER SET utf8")
+	cursor.execute("CREATE SCHEMA mydatabase DEFAULT CHARACTER SET utf8")
 
 	cursor.execute("SHOW DATABASES")
 	for x in cursor:
@@ -18,13 +18,13 @@ def dbcreator():
 
 def dbclearer():
 	mycursor = mydb.cursor()
-	mycursor.execute("USE projectdb")
+	mycursor.execute("USE mydatabase")
 	mycursor.execute("DELETE FROM AnchorTable")
 	mycursor.execute("DROP TABLE AnchorTable")
 
 def dbdropper():
 	cursor = mydb.cursor()
-	cursor.execute("DROP DATABASE projectdb")
+	cursor.execute("DROP DATABASE mydatabase")
 	
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="Utility tool to create, clear or drop database")

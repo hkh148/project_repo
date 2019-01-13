@@ -5,7 +5,7 @@ import sys
 import csv
 from macros import *
 
-mydb = mysql.connector.connect(host='localhost', user=USER_NAME, passwd=PASSWORD,database='projectdb')
+mydb = mysql.connector.connect(host='localhost', user=USER_NAME, passwd=PASSWORD,database='mydatabase')
 mycursor = mydb.cursor()
 exclude = set(string.punctuation)
 exclude.remove("'")
