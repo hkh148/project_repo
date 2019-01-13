@@ -4,7 +4,9 @@ import string
 import sys
 import csv
 from macros import *
+import time
 
+start = time.time()
 mydb = mysql.connector.connect(host='localhost', user=USER_NAME, passwd=PASSWORD,database='mydatabase')
 mycursor = mydb.cursor()
 exclude = set(string.punctuation)
@@ -53,3 +55,5 @@ for i in range(1,4):
 input_file.close()
 result.close()
 mydb.disconnect()
+
+print('elapsed ' + time.time() - start) 
