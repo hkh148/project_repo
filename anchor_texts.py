@@ -2,11 +2,11 @@ import xml.etree.ElementTree as ET
 import re
 import mysql.connector
 from langdetect import detect
-
+import time
 mydb = mysql.connector.connect(host='localhost', user='root', passwd='203761333',database='mydatabase')
 
 mycursor = mydb.cursor()
-
+start = time.time()
 mycursor.execute("CREATE TABLE IF NOT EXISTS AnchorTable (Link VARCHAR(700) NOT NULL, Title VARCHAR(255) NOT NULL, Alias VARCHAR(255) NOT NULL, PRIMARY KEY (Title, Alias) )")
 
 lines = []
@@ -34,12 +34,12 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
                 anchor_text = page_name
             page_name = page_name.encode()
             page_name = page_name.decode('utf-8')
-            try:
-                lang = detect(page_name)
-                if lang != 'he':
-                    continue
-            except:
-                continue
+            #try:
+            #    lang = detect(page_name)
+            #    if lang != 'he':
+            #        continue
+            #except:
+            #    continue
             anchor_text = anchor_text.encode()
             anchor_text = anchor_text.decode('utf-8')
             link = 'https://he.wikipedia.org/wiki/' + str(page_name)
@@ -53,7 +53,6 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
         lines = []
 mydb.commit()
 mydb.disconnect()
-
-
+print('elapses ' + time.time() - start)
 
 
