@@ -56,4 +56,4 @@ input_file.close()
 result.close()
 mydb.disconnect()
 
-print('elapsed ' + time.time() - start) 
+print('elapsed ', time.time() - start) 

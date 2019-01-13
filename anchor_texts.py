@@ -53,6 +53,6 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
         lines = []
 mydb.commit()
 mydb.disconnect()
-print('elapses ' + time.time() - start)
+print('elapses ', time.time() - start)
 
 
