@@ -1,12 +1,13 @@
 import xml.etree.ElementTree as ET
 import re
 import mysql.connector
+from langdetect import detect
 
 mydb = mysql.connector.connect(host='localhost', user='root', passwd='203761333',database='mydatabase')
 
 mycursor = mydb.cursor()
 
-mycursor.execute("CREATE TABLE IF NOT EXISTS AnchorTable (Link VARCHAR(700) NOT NULL, Title VARCHAR(255) NOT NULL, Alias VARCHAR(255) NOT NULL, Taken_From VARCHAR(255) NOT NULL, PRIMARY KEY (Link, Alias) )")
+mycursor.execute("CREATE TABLE IF NOT EXISTS AnchorTable (Link VARCHAR(700) NOT NULL, Title VARCHAR(255) NOT NULL, Alias VARCHAR(255) NOT NULL, PRIMARY KEY (Title, Alias) )")
 
 lines = []
 anchors_lst = []
@@ -39,8 +40,8 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             anchors += [page_name, anchor_text, str(taken_from)]
             #print('link: ' + link + ' ,' + ' page name: ' + page_name + ',' + ' anchor text: ' + anchor_text + ',' + ' taken from: ' + taken_from)
             # mycursor.fetchall()
-            query_insert = 'INSERT IGNORE INTO AnchorTable (Link, Title, Alias, Taken_From) VALUES (%s, %s, %s, %s)'
-            val_insert = (link, page_name, anchor_text, taken_from)
+            query_insert = 'INSERT IGNORE INTO AnchorTable (Link, Title, Alias) VALUES (%s, %s, %s)'
+            val_insert = (link, page_name, anchor_text)
             mycursor.execute(query_insert, val_insert)
         anchors_lst = []
         lines = []
