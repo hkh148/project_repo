@@ -37,10 +37,10 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             try:
                 lang = detect(page_name)
                 if lang != 'he':
-				    print('oops')
+                    print('oops')
                     continue
             except:
-			    print('oops')
+                print('oops')
                 continue
             anchor_text = anchor_text.encode()
             anchor_text = anchor_text.decode('utf-8')
