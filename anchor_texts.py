@@ -34,12 +34,14 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
                 anchor_text = page_name
             page_name = page_name.encode()
             page_name = page_name.decode('utf-8')
-            #try:
-            #    lang = detect(page_name)
-            #    if lang != 'he':
-            #        continue
-            #except:
-            #    continue
+            try:
+                lang = detect(page_name)
+                if lang != 'he':
+				    print('oops')
+                    continue
+            except:
+			    print('oops')
+                continue
             anchor_text = anchor_text.encode()
             anchor_text = anchor_text.decode('utf-8')
             link = 'https://he.wikipedia.org/wiki/' + str(page_name)
