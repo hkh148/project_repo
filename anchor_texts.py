@@ -42,9 +42,9 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
                     i = i + 1
                     continue
             except:
-                print('oops', j)
+                print('oops', j, page_name)
                 j = j + 1
-                if j == 1000:
+                if j > 1000:
                     break
                 continue
             anchor_text = anchor_text.encode()
