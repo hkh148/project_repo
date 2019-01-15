@@ -38,15 +38,9 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             try:
                 lang = detect(page_name)
                 if lang != 'he':
-                    print('oops this is i ', i)
-                    i = i + 1
                     continue
             except:
-                print('oops', j, page_name)
                 continue
-            j = j + 1
-            if j > 1000:
-                break
             anchor_text = anchor_text.encode()
             anchor_text = anchor_text.decode('utf-8')
             link = 'https://he.wikipedia.org/wiki/' + str(page_name)
@@ -58,6 +52,8 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             mycursor.execute(query_insert, val_insert)
         anchors_lst = []
         lines = []
+        if lang != 'he':
+            break
 mydb.commit()
 mydb.disconnect()
 print('elapses ', time.time() - start)
