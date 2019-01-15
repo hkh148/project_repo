@@ -44,8 +44,8 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             except:
                 print('oops', j)
                 j = j + 1
-				if j == 1000:
-				    break
+                if j == 1000:
+                    break
                 continue
             anchor_text = anchor_text.encode()
             anchor_text = anchor_text.decode('utf-8')
