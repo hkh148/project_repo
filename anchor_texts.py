@@ -43,10 +43,10 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
                     continue
             except:
                 print('oops', j, page_name)
-                j = j + 1
                 if j > 1000:
                     break
                 continue
+            j = j + 1
             anchor_text = anchor_text.encode()
             anchor_text = anchor_text.decode('utf-8')
             link = 'https://he.wikipedia.org/wiki/' + str(page_name)
