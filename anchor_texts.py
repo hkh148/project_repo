@@ -12,7 +12,8 @@ mycursor.execute("CREATE TABLE IF NOT EXISTS AnchorTable (Link VARCHAR(700) NOT 
 lines = []
 anchors_lst = []
 anchors = []
-
+i = 0
+j = 0
 taken_from = ''
 for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("start", "end")):
     if event == 'end' and elem.tag == '{http://www.mediawiki.org/xml/export-0.10/}title':
@@ -34,8 +35,6 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
                 anchor_text = page_name
             page_name = page_name.encode()
             page_name = page_name.decode('utf-8')
-            i = 0
-            j = 0
             try:
                 lang = detect(page_name)
                 if lang != 'he':
@@ -45,6 +44,8 @@ for event, elem in ET.iterparse('hewiki-20180201-pages-articles.xml', events=("s
             except:
                 print('oops', j)
                 j = j + 1
+				if j == 1000:
+				    break
                 continue
             anchor_text = anchor_text.encode()
             anchor_text = anchor_text.decode('utf-8')
